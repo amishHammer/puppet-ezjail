@@ -1,0 +1,36 @@
+##
+## FILE MANAGED BY PUPPET
+##
+
+ezjail_jaildir="<%= @jaildir %>"
+ezjail_jailtemplate="<%= @jailtemplate %>"
+ezjail_jailbase="<%= @jailbase %>"
+ezjail_sourcetree="<%= @sourcetree %>"
+ezjail_ftphost="<%= @ftphost %>"
+ezjail_default_execute="<%= @default_execute %>"
+ezjail_default_flavour="<%= @default_flavour %>"
+ezjail_archivedir="<%= @archivedir %>"
+ezjail_uglyperlhack="<%= @uglyperlhack %>"
+ezjail_mount_enable="<%= @mount_enable %>"
+ezjail_devfs_enable="<%= @devfs_enable %>"
+ezjail_devfs_ruleset="<%= @devfs_ruleset %>"
+ezjail_procfs_enable="<%= @procfs_enable %>"
+ezjail_fdescfs_enable="<%= @fdescfs_enable %>"
+
+<% if @use_zfs -%>
+ezjail_use_zfs="<%= @use_zfs %>"
+ezjail_use_zfs_for_jails="<%= @use_zfs_for_jails %>"
+ezjail_jailzfs="<%= @jailzfs %>"
+<% if @zfs_properties -%>
+ezjail_zfs_properties="<%= @zfs_properties %>"
+<% end -%>
+<% if @zfs_jail_properties -%>
+ezjail_zfs_jail_properties="<%= @zfs_jail_properties %>"
+<% end -%>
+<% end -%>
+
+<% if @defaul_retention_policy -%>
+ezjail_default_retention_policy="<%= @default_retention_policy %>"
+<% end -%>
+
+
