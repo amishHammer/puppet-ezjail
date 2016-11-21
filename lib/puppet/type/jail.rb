@@ -30,6 +30,9 @@ Puppet::Type.newtype(:jail) do
     newparam(:flavour) do
         desc "The flavour to use to create the jail."
     end
+    newparam(:fib) do
+        desc "The FIB to use to create the jail."
+    end
 
     autorequire(:anchor) do [ 'ezjail::end' ] end
 end

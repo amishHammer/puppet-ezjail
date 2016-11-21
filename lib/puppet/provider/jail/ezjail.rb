@@ -48,6 +48,13 @@ Puppet::Type.type(:jail).provide :ezjail do
                 "#{@resource[:ipaddress]}",
             ])
         end
+        if @resource[:fib]
+            ezjail_admin([
+                'config',
+                '-f', "#{@resource[:fib]}",
+                "#{@resource[:hostname]}",
+            ])
+        end
     end
 
     def destroy
